@@ -73,7 +73,7 @@ const Navbar = () => {
           </div>
 
           <div className={`flex items-center gap-5 lg:hidden ${navbarOpen ? 'w-full justify-end' : ''}`}>
-            <button onClick={() => value.toggleTheme}>{value.mode ? <BsFillSunFill color="white" size={25} /> : <BsFillMoonFill color="black" size={25} />}</button>
+            <button onClick={(e) => value.toggleTheme(e)}>{value.mode ? <BsFillSunFill color="white" size={25} /> : <BsFillMoonFill color="black" size={25} />}</button>
             <button
               aria-expanded={navbarOpen}
               aria-haspopup="true"
@@ -107,7 +107,7 @@ const Navbar = () => {
           <a href="https://github.com/qvisten12/felix-webpage" rel="noreferrer nofollow" target="_blank" className={` text-black dark:text-white ${styles.child}`}>
             Source
           </a>
-          <button className="hidden lg:block" onClick={() => value.toggleTheme}>
+          <button className="hidden lg:block" onClick={(e) => value.toggleTheme(e)}>
             {value.mode ? <BsFillSunFill color="white" size={25} className={`${styles.child}`} /> : <BsFillMoonFill color="black" className={`${styles.child}`} size={25} />}
           </button>
         </div>
