@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react'
 import emailjs from 'emailjs-com'
+import Head from 'next/head'
 
 const Contact = () => {
   const [name, setName] = useState('')
@@ -38,6 +39,9 @@ const Contact = () => {
 
   return (
     <div className="block text-center">
+      <Head>
+        <title>Contact Felix</title>
+      </Head>
       <h1 className="font-medium md:font-semibold text-4xl md:text-8xl ">Contact Me</h1>
       <p className="text-center text-gray-600 text-lg mt-5 font-medium m-1 my-2">Found a bug, a tip, or maybe you just want to say hi?</p>
       <div className="mt-20">

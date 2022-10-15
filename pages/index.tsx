@@ -1,10 +1,14 @@
 import type { NextPage } from 'next'
+import Head from 'next/head'
 import Card from '../components/Card'
 import Header from '../components/Header'
 
 const Home: NextPage = () => {
   return (
     <div>
+      <Head>
+        <title>Felix Ljungqvist - Portfolio</title>
+      </Head>
       <Header />
       <Card secondaryText="About me" imageUrl="/images/IMG_0074.png" />
       <p className="font-medium text-4xl text-center my-40 dark:text-white">By writing front-end code, I help produce amazing systems with a create inclusive experiences.</p>
