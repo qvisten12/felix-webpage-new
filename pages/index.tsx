@@ -10,7 +10,7 @@ const Home: NextPage = () => {
         <title>Felix Ljungqvist - Portfolio</title>
       </Head>
       <Header />
-      <Card secondaryText="About me" imageUrl="/images/IMG_0074.png" />
+      <Card secondaryText="About me" imageUrl="/images/felix.png" />
       <p className="font-medium text-4xl text-center my-40 dark:text-white">By writing front-end code, I help produce amazing systems with a create inclusive experiences.</p>
       <div className="flex flex-col gap-10">
         <Card primaryText="Branch Search" secondaryText="Bilia Anläggningar" imageUrl="/images/anlaggningar.png" bg={'bg-red-100 dark:bg-red-900'} text="text-red-400 dark:text-red-200" />
