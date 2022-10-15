@@ -17,7 +17,7 @@ const Header = () => {
             height: '100px',
           }}
         >
-          <Image priority src={`${value.mode ? '/images/bilia-white.png' : '/images/bilia.png'}`} alt="motorit" layout="fill" objectFit="contain"></Image>
+          <Image src={`${value.mode ? '/images/bilia-white.png' : '/images/bilia.png'}`} alt="motorit" layout="fill" objectFit="contain"></Image>
         </div>
       </div>
     </div>
