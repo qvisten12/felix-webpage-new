@@ -1,0 +1,11 @@
+.child {
+  color: black;
+  display: inline-block;
+}
+
+.parent:hover .child {
+  opacity: 0.4;
+}
+.parent .child:hover {
+  opacity: 1;
+}

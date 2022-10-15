@@ -1,0 +1,54 @@
+.child {
+  color: black;
+  display: inline-block;
+}
+
+.parent:hover .child {
+  opacity: 0.4;
+}
+.parent .child:hover {
+  opacity: 1;
+}
+
+.burger {
+  position: relative;
+  background: transparent;
+  cursor: pointer;
+  width: 49px;
+  height: 49px;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+}
+
+.burger span {
+  display: block;
+  height: 3px;
+  width: 30px;
+  /* background: white; */
+  transition: all 0.2s ease;
+  position: absolute;
+  right: 8px;
+  transform: rotate(0deg);
+}
+
+.burger span:first-child {
+  width: 30px;
+  top: 18px;
+}
+.burger span:last-child {
+  width: 30px;
+  top: 27px;
+}
+
+.burger[aria-expanded='true'] span {
+  /* background-color: #ffd9cb; */
+  top: 23px;
+}
+.burger[aria-expanded='true'] span:first-child {
+  transform: rotate(45deg);
+}
+.burger[aria-expanded='true'] span:last-child {
+  transform: rotate(-45deg);
+  width: 30px;
+}

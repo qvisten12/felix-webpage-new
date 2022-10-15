@@ -1,0 +1,61 @@
+.card {
+  transition: all 0.2s ease 0s, transform 200ms ease 0s;
+  transform: scaleX(1) scaleY(1);
+  height: 610px;
+}
+
+.cardImage {
+  width: 500px;
+  height: 500px;
+  top: -10px;
+  right: 0px;
+}
+
+.background {
+  background: rgb(247, 247, 247);
+}
+
+@media only screen and (min-width: 768px) {
+  .card {
+    height: 700px;
+  }
+  .cardImage {
+    height: 600px;
+    width: 500px;
+    top: 100px;
+    right: -30px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .cardImage {
+    width: 100%;
+    height: 400px;
+    top: 40px;
+    right: 0px;
+  }
+}
+
+.card:hover {
+  transform: scaleX(0.95) scaleY(0.95);
+}
+
+.cardTitle {
+  transform-style: preserve-3d;
+  transition: transform 200ms ease 0s;
+  transform: translateX(0px) translateY(0px) translateZ(0px);
+}
+
+.card:hover .cardTitle {
+  transform: translateX(20px) translateY(20px) translateZ(0px);
+}
+
+.cardTeaser {
+  transform-style: preserve-3d;
+  transition: transform 200ms ease 0s;
+  transform: translateX(0px) translateY(0px) translateZ(0px);
+}
+
+.card:hover .cardTeaser {
+  transform: translateX(20px) translateY(-20px) translateZ(0px);
+}
