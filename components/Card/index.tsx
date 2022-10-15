@@ -25,7 +25,7 @@ const Card: FC<Props> = ({ primaryText = '', secondaryText = '', imageUrl = '', 
       </div>
       <div className="w-full md:w-1/2 h-full relative">
         <div className={`absolute top-0 md:right-0 ${styles.cardImage}`}>
-          <Image src={imageUrl} layout="fill" objectFit="cover" />
+          <Image src={imageUrl} layout="fill" objectFit="cover" alt={secondaryText} />
         </div>
       </div>
     </div>
