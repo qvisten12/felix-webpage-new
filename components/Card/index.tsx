@@ -3,29 +3,34 @@ import React, { FC } from 'react'
 import styles from './Card.module.css'
 
 interface Props {
-  primaryText?: string
-  secondaryText: string
+  primaryText: string
+  secondaryText?: string
   imageUrl: string
-  bg?: string
-  text?: string
+  alignment?: IAlignment
+  useAsRef?: boolean
 }
 
-const Card: FC<Props> = ({ primaryText = '', secondaryText = '', imageUrl = '', bg = '', text = '' }) => {
+export enum IAlignment {
+  start = 'items-start',
+  end = 'items-end',
+  center = 'items-center',
+}
+
+const Card: FC<Props> = ({ primaryText = '', secondaryText = '', imageUrl = '', alignment, useAsRef }) => {
   return (
-    <div className={`${styles.card} ${bg ? bg : styles.background} flex flex-col md:flex-row justify-between  cursor-pointer overflow-hidden `}>
-      <div className="pb-0 md:pb-16 p-8 md:p-16 flex flex-col justify-between">
-        <h2 className={`font-medium text-4xl  ${text ? text : 'text-black'} md:text-5xl  ${styles.cardTitle}`}>
-          {primaryText ? primaryText : 'Nice to '}
-          <span>
-            <br />
-            {primaryText ? '' : 'meet you'}
-          </span>
-        </h2>
-        <p className={`font-medium text-2xl md:text-3xl mt-10 md:mt-0 ${styles.cardTeaser} ${text ? text : 'text-gray-400 md:text-black'}`}>{secondaryText}</p>
-      </div>
-      <div className="w-full md:w-1/2 h-full relative">
-        <div className={`absolute top-0 md:right-0 ${styles.cardImage}`}>
-          <Image src={imageUrl} layout="fill" objectFit="cover" alt={secondaryText} />
+    <div id={useAsRef ? 'work' : ''} className={` font-sfRegular text-white`}>
+      <div className={`w-full flex flex-col ${alignment ? alignment : 'items-end'}`}>
+        <div tabIndex={0} className={`${styles.card}`}>
+          <div className={`${styles.cardImage} relative bg-white `}>
+            <div className="absolute top-20 w-full h-full">
+              <Image src={imageUrl} layout="fill" objectFit="contain" />
+            </div>
+          </div>
+
+          <div className="mt-5">
+            <h2 className="opacity-90">{primaryText}</h2>
+            <h3 className="opacity-70">{secondaryText}</h3>
+          </div>
         </div>
       </div>
     </div>

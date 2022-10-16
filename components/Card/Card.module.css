@@ -1,6 +1,39 @@
 .card {
   transition: all 0.2s ease 0s, transform 200ms ease 0s;
   transform: scaleX(1) scaleY(1);
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scaleX(0.95) scaleY(0.95);
+}
+
+.cardImage {
+  height: 600px;
+  width: 800px;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+  .cardImage {
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .cardImage {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+/* .card {
+  transition: all 0.2s ease 0s, transform 200ms ease 0s;
+  transform: scaleX(1) scaleY(1);
   height: 610px;
 }
 
@@ -58,4 +91,4 @@
 
 .card:hover .cardTeaser {
   transform: translateX(20px) translateY(-20px) translateZ(0px);
-}
+} */

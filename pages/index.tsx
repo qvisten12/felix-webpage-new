@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Card from '../components/Card'
 import Header from '../components/Header'
+import { IAlignment } from '../components/Card'
 
 const Home: NextPage = () => {
   return (
@@ -10,25 +11,20 @@ const Home: NextPage = () => {
         <title>Felix Ljungqvist - Portfolio</title>
       </Head>
       <Header />
-      <Card secondaryText="About me" imageUrl="/images/felix.png" />
-      <p className="font-medium text-4xl text-center my-40 dark:text-white">By writing front-end code, I help produce amazing systems with a create inclusive experiences.</p>
-      <div className="flex flex-col gap-10">
-        <Card primaryText="Branch Search" secondaryText="Bilia Anläggningar" imageUrl="/images/anlaggningar.png" bg={'bg-red-100 dark:bg-red-900'} text="text-red-400 dark:text-red-200" />
-        <Card
-          primaryText="A hackerscroller clone with a more modern UI"
-          secondaryText="HackerScroller"
-          imageUrl="/images/hackerscroller-preview.png"
-          text="text-blue-400 dark:text-blue-200"
-          bg={'bg-blue-100 dark:bg-blue-900'}
-        />
-        <Card
-          primaryText="Weather application"
-          secondaryText="Yutu Weather"
-          imageUrl="/images/yutu-preview.png"
-          text="text-emerald-400 dark:text-emerald-200"
-          bg={'bg-emerald-100 dark:bg-emerald-900'}
-        />
-      </div>
+
+      <section className="flex flex-col gap-20">
+        <Card primaryText="Learn about my work" secondaryText="About me" imageUrl="/images/felix.png" alignment={IAlignment.end} />
+
+        <Card useAsRef={true} primaryText="Branch search & filtering" secondaryText="Bilia Anläggningar" imageUrl="/images/anlaggningar.png" alignment={IAlignment.start} />
+      </section>
+
+      <p className="font-sfRegular text-3xl text-end my-40 w-full md:pl-96 text-white">By writing front-end code, I help produce amazing systems and create inclusive experiences.</p>
+
+      <section className="flex flex-col gap-20">
+        <Card primaryText="Learn about my work" secondaryText="About me" imageUrl="/images/hackerscroller-preview.png" alignment={IAlignment.center} />
+
+        <Card primaryText="Learn about my work" secondaryText="About me" imageUrl="/images/yutu-preview.png" alignment={IAlignment.start} />
+      </section>
     </div>
   )
 }
