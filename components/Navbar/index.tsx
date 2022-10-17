@@ -3,6 +3,7 @@ import Router from 'next/router'
 import Logo from '../Logo'
 import Link from 'next/link'
 import styles from './Navbar.module.css'
+import { motion } from 'framer-motion'
 
 import { useRouter } from 'next/router'
 
@@ -66,6 +67,11 @@ const Navbar = () => {
     }, 500)
   }
 
+  const variants = {
+    open: { opacity: 1, y: 0 },
+    closed: { opacity: 0, y: '-100%' },
+  }
+
   return (
     <>
       <nav
@@ -94,7 +100,10 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div
+        <motion.div
+          animate={navbarOpen ? 'open' : 'closed'}
+          variants={variants}
+          transition={{ duration: 0.2 }}
           className={`gap-7 mt-2  flex-col text-5xl  p-2 items-start w-full 
           font-sfRegular
         ${navbarOpen ? 'flex h-screen items-center' : 'hidden'}`}
@@ -112,7 +121,7 @@ const Navbar = () => {
           <a href="https://github.com/qvisten12/felix-webpage" rel="noreferrer nofollow" target="_blank" className={` text-white `}>
             Source
           </a>
-        </div>
+        </motion.div>
       </nav>
     </>
   )
