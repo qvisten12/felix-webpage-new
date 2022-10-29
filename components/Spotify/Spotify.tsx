@@ -1,7 +1,7 @@
 import React from 'react'
 import useSWR from 'swr'
 import { SiSpotify } from 'react-icons/si'
-import Image from "next/legacy/image";
+import Image from 'next/image'
 
 const Spotify = () => {
   const fetcher = (url: any) => fetch(url).then((r) => r.json())
@@ -16,8 +16,8 @@ const Spotify = () => {
           className="relative flex items-center mt-3 md:mt-0 p-2 space-x-4 transition-shadow
           border rounded-md hover:shadow-sm w-80 md:w-full"
         >
-          <div className={`w-16 text-gray-400 hover:text-gray-600 h-16 ${!data?.isPlaying ? 'flex justify-center items-center' : ''}`}>
-            {data?.albumImageUrl && data?.isPlaying ? <Image src={data?.albumImageUrl} alt={data?.album} height="65%" width="65%" layout="fixed" /> : <SiSpotify size={30} />}
+          <div className={`relative w-16 text-gray-400 hover:text-gray-600 h-16 ${!data?.isPlaying ? 'flex justify-center items-center' : ''}`}>
+            {data?.albumImageUrl && data?.isPlaying ? <Image src={data?.albumImageUrl} alt={data?.album} fill /> : <SiSpotify size={30} />}
           </div>
 
           <div className="flex-1">
