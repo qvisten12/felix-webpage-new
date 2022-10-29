@@ -23,7 +23,7 @@ const Card: FC<Props> = ({ primaryText = '', secondaryText = '', imageUrl = '', 
         <div tabIndex={0} className={`${styles.card}`}>
           <div className={`${styles.cardImage} relative bg-white `}>
             <div className="absolute top-20 w-full h-full">
-              <Image src={imageUrl} layout="fill" objectFit="contain" />
+              <Image src={imageUrl} fill={true} alt="" />
             </div>
           </div>
 

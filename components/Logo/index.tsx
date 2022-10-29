@@ -7,8 +7,8 @@ interface Props {
 
 const Logo: FC<Props> = ({ Text = '' }) => {
   return (
-    <Link href="/">
-      <a className={`font-sfRegular text-lg text-white `}>{Text}</a>
+    <Link className={`font-sfRegular text-lg text-white `} href="/">
+      {Text}
     </Link>
   )
 }

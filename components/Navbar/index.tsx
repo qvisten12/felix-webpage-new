@@ -111,11 +111,11 @@ const Navbar = () => {
           <button onClick={() => gotoElement('work')}>
             <a className={`text-white`}>Work</a>
           </button>
-          <Link href="/about">
-            <a className={`text-white`}>About</a>
+          <Link className={`text-white`} href="/about">
+            About
           </Link>
-          <Link href="/contact">
-            <a className={`text-white`}>Contact</a>
+          <Link className={`text-white`} href="/contact">
+            Contact
           </Link>
 
           <a href="https://github.com/qvisten12/felix-webpage" rel="noreferrer nofollow" target="_blank" className={` text-white `}>

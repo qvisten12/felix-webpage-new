@@ -1,7 +1,7 @@
 import React from 'react'
 import useSWR from 'swr'
 import { SiSpotify } from 'react-icons/si'
-import Image from 'next/image'
+import Image from "next/legacy/image";
 
 const Spotify = () => {
   const fetcher = (url: any) => fetch(url).then((r) => r.json())
