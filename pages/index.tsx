@@ -10,7 +10,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Felix Ljungqvist - Portfolio</title>
+        <title>Felix Ljungqvist - Work</title>
       </Head>
       <Header />
 
