@@ -3,7 +3,12 @@ import Link from 'next/link'
 import PropTypes from 'prop-types'
 import { useEffect, useState } from 'react'
 
-const ActiveLink = ({ href, children, ...rest }: any) => {
+interface Props {
+  href?: string
+  children?: any
+}
+
+const ActiveLink = ({ href = '', children, ...rest }: Props) => {
   const router = useRouter()
 
   const useLoaded = () => {
