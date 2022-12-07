@@ -13,19 +13,17 @@ const Layout = ({ children }: Props) => {
   }
 
   return (
-    <div className={` flex flex-col justify-between h-full bg-black`}>
+    <div className={` flex flex-col justify-between h-full bg-white`}>
       <Navbar />
-
-      <div className="mt-32 md:mt-56 container max-w-screen-xl mx-auto mb-10 md:mb-20 px-6 relative">
+      <div className="mt-32 md:mt-64 mb-10 md:mb-20 px-5 sm:px-10 md:px-16 lg:px-24 xl:px-32">
         {children}
 
-        <div className="absolute bottom-60 right-0 block">
-          <button onClick={() => scrollToTop()} title="Go to top" className="text-white text-5xl opacity-80 fixed bottom-60 ">
+        {/* <div className="absolute bottom-60 right-0 block">
+          <button onClick={() => scrollToTop()} title="Go to top" className="text-black text-5xl opacity-80 fixed bottom-60 ">
             ^
           </button>
-        </div>
+        </div> */}
       </div>
-
       <Footer />
     </div>
   )

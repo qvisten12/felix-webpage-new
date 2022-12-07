@@ -1,10 +1,12 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React, { FC } from 'react'
 import styles from './Card.module.css'
 
 interface Props {
   primaryText: string
   secondaryText?: string
+  description?: string
   imageUrl: string
   alignment?: IAlignment
   useAsRef?: boolean
@@ -16,24 +18,21 @@ export enum IAlignment {
   center = 'items-center',
 }
 
-const Card: FC<Props> = ({ primaryText = '', secondaryText = '', imageUrl = '', alignment, useAsRef }) => {
+const Card: FC<Props> = ({ primaryText = '', secondaryText = '', description = '', imageUrl = '', alignment, useAsRef }) => {
   return (
-    <div id={useAsRef ? 'work' : ''} className={` font-sfRegular text-white`}>
-      <div className={`w-full flex flex-col ${alignment ? alignment : 'items-end'}`}>
-        <div tabIndex={0} className={`${styles.card}`}>
-          <div className={`${styles.cardImage} relative bg-white `}>
-            <div className="absolute top-20 w-full h-full">
-              <Image src={imageUrl} fill={true} alt="" />
-            </div>
-          </div>
-
-          <div className="mt-5">
-            <h2 className="opacity-90">{primaryText}</h2>
-            <h3 className="opacity-70">{secondaryText}</h3>
-          </div>
+    <Link href={'/'} tabIndex={0} id={useAsRef ? 'work' : ''} className="flex justify-between flex-col lg:flex-row gap-5">
+      <div className="order-2 lg:order-1 flex flex-col justify-center items-start gap-2 tracking-wider w-full md:w-1/2">
+        <h4 className="opacity-50 text-xl font-sfBold ">{primaryText}</h4>
+        <h3 className="text-4xl font-sfBold">{secondaryText}</h3>
+        <p className="font-akuratLight text-xl">{description}</p>
+        <button className="py-3 px-10 mt-2 text-lg bg-black text-white font-sfBold rounded-md">Read More</button>
+      </div>
+      <div className={`${styles.cardImage} order-1 lg:order-2 relative bg-sky-100`}>
+        <div className="absolute top-20 w-full h-full">
+          <Image src={imageUrl} quality={80} fill={true} loading="lazy" alt={secondaryText} />
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
 

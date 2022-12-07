@@ -67,7 +67,7 @@ const Contact = () => {
               <button
                 className="border-blue-500 border-2 p-2 my-2
                     rounded-md text-blue-500 text-md font-bold
-                    hover:bg-blue-500 hover:text-white"
+                    hover:bg-blue-500 hover:text-black"
                 type="submit"
                 value="Send"
               >

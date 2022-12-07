@@ -4,6 +4,7 @@ import Card from '../components/Card'
 import Header from '../components/Header'
 import { IAlignment } from '../components/Card'
 import { motion } from 'framer-motion'
+import Drift from 'react-driftjs'
 
 const Home: NextPage = () => {
   return (
@@ -12,6 +13,14 @@ const Home: NextPage = () => {
         <title>Felix Ljungqvist - Portfolio</title>
       </Head>
       <Header />
+
+      {/* https://app.drift.com/settings2/widget */}
+      <Drift
+        appId="3x2mum5y49zy"
+        style={{
+          bottom: '100px',
+        }}
+      />
 
       <motion.section
         initial="hidden"
@@ -29,20 +38,27 @@ const Home: NextPage = () => {
             },
           },
         }}
-        className="flex flex-col gap-20"
+        className="flex flex-col gap-32"
       >
-        <Card primaryText="Learn about my work" secondaryText="About me" imageUrl="/images/felix.png" alignment={IAlignment.end} />
+        <Card
+          useAsRef={true}
+          primaryText="Bilia"
+          secondaryText="Branches"
+          description="A complete revamp of Bilia's branch search layout."
+          imageUrl="/images/anlaggningar.png"
+          alignment={IAlignment.start}
+        />
 
-        <Card useAsRef={true} primaryText="Branch search & filtering" secondaryText="Bilia Anläggningar" imageUrl="/images/anlaggningar.png" alignment={IAlignment.start} />
+        <Card
+          primaryText="Personal Project"
+          secondaryText="HackerScroller Clone"
+          description="A redesign of hackerscroller, with a new slimer and more modern look."
+          imageUrl="/images/hackerscroller-preview.png"
+          alignment={IAlignment.center}
+        />
+
+        <Card primaryText="Personal Project" secondaryText="Yutu Weather" description="A weather app, designed to be easy and fast." imageUrl="/images/yutu-preview.png" alignment={IAlignment.start} />
       </motion.section>
-
-      <p className="font-sfRegular text-3xl text-end my-40 w-full md:pl-96 text-white">By writing front-end code, I help produce amazing systems and create inclusive experiences.</p>
-
-      <section className="flex flex-col gap-20">
-        <Card primaryText="Learn about my work" secondaryText="About me" imageUrl="/images/hackerscroller-preview.png" alignment={IAlignment.center} />
-
-        <Card primaryText="Learn about my work" secondaryText="About me" imageUrl="/images/yutu-preview.png" alignment={IAlignment.start} />
-      </section>
     </div>
   )
 }

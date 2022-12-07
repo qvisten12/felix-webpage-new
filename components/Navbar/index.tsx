@@ -6,6 +6,7 @@ import styles from './Navbar.module.css'
 import { motion } from 'framer-motion'
 
 import { useRouter } from 'next/router'
+import ActiveLink from '../ActiveLink'
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
@@ -79,10 +80,19 @@ const Navbar = () => {
           transition: 'top 0.6s',
         }}
         ref={navRef}
-        className="py-6 px-6 fixed top-0 w-full z-40 bg-black opacity-100 lg:opacity-90"
+        className="py-6 px-5 md:px-10 fixed top-0 w-full z-40 bg-white opacity-100 lg:opacity-90"
       >
         <div className="w-full flex justify-between items-center">
-          <button
+          <div>
+            <Logo Text="Felix  Ljungqvist" />
+          </div>
+
+          <div className="flex justify-between items-baseline gap-8">
+            <ActiveLink href="/"> Work </ActiveLink>
+            <ActiveLink href="/about"> About </ActiveLink>
+          </div>
+
+          {/* <button
             aria-expanded={navbarOpen}
             aria-haspopup="true"
             aria-label="Menu"
@@ -91,37 +101,33 @@ const Navbar = () => {
               setNavbarOpen(!navbarOpen)
             }}
           >
-            <span className="bg-white" aria-hidden="true"></span>
-            <span className="bg-white" aria-hidden="true"></span>
-          </button>
-
-          <div className={`${navbarOpen ? 'hidden' : ''}`}>
-            <Logo Text="Felix  Ljungqvist" />
-          </div>
+            <span className="bg-black" aria-hidden="true"></span>
+            <span className="bg-black" aria-hidden="true"></span>
+          </button> */}
         </div>
 
-        <motion.div
+        {/* <motion.div
           animate={navbarOpen ? 'open' : 'closed'}
           variants={variants}
           transition={{ duration: 0.2 }}
           className={`gap-7 mt-2  flex-col text-5xl  p-2 items-start w-full 
           font-sfRegular
-        ${navbarOpen ? 'flex h-screen items-center' : 'hidden'}`}
+        ${navbarOpen ? 'flex h-screen items-center bg-white bg-opacity-90' : 'hidden '}`}
         >
           <button onClick={() => gotoElement('work')}>
-            <a className={`text-white`}>Work</a>
+            <a className={`text-black`}>Work</a>
           </button>
-          <Link className={`text-white`} href="/about">
+          <Link className={`text-black`} href="/about">
             About
           </Link>
-          <Link className={`text-white`} href="/contact">
+          <Link className={`text-black`} href="/contact">
             Contact
           </Link>
 
-          <a href="https://github.com/qvisten12/felix-webpage" rel="noreferrer nofollow" target="_blank" className={` text-white `}>
+          <a href="https://github.com/qvisten12/felix-webpage" rel="noreferrer nofollow" target="_blank" className={` text-black `}>
             Source
           </a>
-        </motion.div>
+        </motion.div> */}
       </nav>
     </>
   )

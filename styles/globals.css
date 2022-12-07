@@ -4,7 +4,7 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: black;
+  background-color: white;
 }
 
 @font-face {
@@ -15,4 +15,14 @@ html {
 @font-face {
   font-family: 'sf-bold';
   src: url('../public/fonts/SF_BOLD.OTF');
+}
+
+@font-face {
+  font-family: 'akurat-light';
+  src: url('../public/fonts/Akkurat_Light.otf');
+}
+
+@font-face {
+  font-family: 'akurat-normal';
+  src: url('../public/fonts/Akkurat_Normal.otf');
 }

@@ -5,6 +5,8 @@ module.exports = {
     fontFamily: {
       sfRegular: ['sf-regular', 'sans-serif'],
       sfBold: ['sf-bold', 'sans-serif'],
+      akuratLight: ['akurat-light', 'sans-serif'],
+      akuratNormal: ['akurat-normal', 'sans-serif'],
     },
   },
   plugins: [],
