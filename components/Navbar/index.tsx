@@ -87,7 +87,7 @@ const Navbar = () => {
             <Logo Text="Felix  Ljungqvist" />
           </div>
 
-          <div className="flex justify-between items-baseline gap-8 w-36">
+          <div className="flex justify-between items-baseline w-28">
             <ActiveLink href="/"> Work </ActiveLink>
             <ActiveLink href="/about"> About </ActiveLink>
           </div>

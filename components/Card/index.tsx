@@ -26,7 +26,7 @@ const Card: FC<Props> = ({ primaryText = '', secondaryText = '', description = '
         <h4 className="opacity-50 text-xl font-sfBold ">{primaryText}</h4>
         <h3 className="text-4xl font-sfBold">{secondaryText}</h3>
         <p className="font-akuratLight text-xl">{description}</p>
-        <Link href={href} className="py-3 px-10 mt-2 text-lg bg-black text-white font-sfBold rounded-md">
+        <Link href={href} className="py-3 px-10 w-full sm:w-fit text-center mt-2 text-lg bg-black text-white font-sfBold rounded-md">
           Read More
         </Link>
       </div>
