@@ -21,10 +21,10 @@ const FourOhFour = () => {
       <Link
         className="border-blue-500 border-2 p-2 mt-5
                     rounded-md text-blue-500 text-2xl font-semibold
-                    hover:bg-blue-500 hover:text-black"
+                    hover:bg-blue-500 hover:text-white"
         href="/"
       >
-        {'<'} Take me home
+        Take me home
       </Link>
     </div>
   )
