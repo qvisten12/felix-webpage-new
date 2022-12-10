@@ -1,7 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Card from '../components/Card'
-import { IAlignment } from '../components/Card'
 import { motion } from 'framer-motion'
 import Drift from 'react-driftjs'
 
