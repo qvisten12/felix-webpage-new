@@ -38,26 +38,19 @@ const Home: NextPage = () => {
             },
           },
         }}
-        className="flex flex-col gap-32"
+        className="flex flex-col gap-14 lg:gap-32"
       >
-        <Card
-          useAsRef={true}
-          primaryText="Bilia"
-          secondaryText="Branches"
-          description="A complete revamp of Bilia's branch search layout."
-          imageUrl="/images/anlaggningar.png"
-          alignment={IAlignment.start}
-        />
+        <Card useAsRef={true} primaryText="Bilia" secondaryText="Branches" description="A complete revamp of Bilia's branch search layout." imageUrl="/images/anlaggningar.png" />
 
         <Card
           primaryText="Personal Project"
           secondaryText="HackerScroller Clone"
           description="A redesign of hackerscroller, with a new slimer and more modern look."
           imageUrl="/images/hackerscroller-preview.png"
-          alignment={IAlignment.center}
+          backgroundColor="#B4E7FC"
         />
 
-        <Card primaryText="Personal Project" secondaryText="Yutu Weather" description="A weather app, designed to be easy and fast." imageUrl="/images/yutu-preview.png" alignment={IAlignment.start} />
+        <Card primaryText="Personal Project" secondaryText="Yutu Weather" description="A weather app, designed to be easy and fast." backgroundColor="#ece3d3" imageUrl="/images/yutu-preview.png" />
       </motion.section>
     </div>
   )

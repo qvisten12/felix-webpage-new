@@ -41,7 +41,7 @@ const About = () => {
         <Card
           primaryText="Felix Ljungqvist"
           secondaryText="Thinker, Maker, Storyteller."
-          description="Hi! I’m Felix—a front-end developer based out of Gothenburg, Sweden. I'm currently a Junior front-end developer at Motorit, where I'm inventing new ways to make work meaningful.
+          description="Hi! I’m Felix- a front-end developer based out of Gothenburg, Sweden. I'm currently a Junior front-end developer at Motorit, where I'm inventing new ways to make work meaningful.
           ‍
           I pursued my graduate studies at SVA’s Products of Design program. I dedicated my MFA thesis to leveraging the power of design in order to build stronger family environments—especially for families of low-income. Using research driven design methods, I created a suite of family products that allow for healthier childhood development in adverse conditions.
           
@@ -51,7 +51,6 @@ const About = () => {
           ‍
           If you have any inquiries or would like to collaborate on a project, please don’t hesitate to contact me!"
           imageUrl="/images/anlaggningar.png"
-          alignment={IAlignment.start}
         />
       </motion.section>
     </div>

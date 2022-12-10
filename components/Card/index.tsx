@@ -9,17 +9,11 @@ interface Props {
   description?: string
   href?: string
   imageUrl: string
-  alignment?: IAlignment
   useAsRef?: boolean
+  backgroundColor?: string
 }
 
-export enum IAlignment {
-  start = 'items-start',
-  end = 'items-end',
-  center = 'items-center',
-}
-
-const Card: FC<Props> = ({ primaryText = '', secondaryText = '', description = '', imageUrl = '', alignment, useAsRef, href = '/' }) => {
+const Card: FC<Props> = ({ primaryText = '', secondaryText = '', description = '', imageUrl = '', backgroundColor = '', useAsRef, href = '/' }) => {
   return (
     <div tabIndex={0} id={useAsRef ? 'work' : ''} className="flex justify-between flex-col lg:flex-row gap-5">
       <div className="order-2 lg:order-1 flex flex-col justify-center items-start gap-2 tracking-wider w-full md:w-1/2">
@@ -30,8 +24,8 @@ const Card: FC<Props> = ({ primaryText = '', secondaryText = '', description = '
           Read More
         </Link>
       </div>
-      <div className={`${styles.cardImage} order-1 lg:order-2 relative bg-sky-100`}>
-        <div className="absolute top-20 w-full h-full">
+      <div className={`${styles.cardImage} order-1 lg:order-2 relative`} style={{ backgroundColor: `${backgroundColor}` }}>
+        <div className="absolute w-full h-full">
           <Link href={href}>
             <Image src={imageUrl} quality={80} fill={true} loading="lazy" alt={secondaryText} />
           </Link>
