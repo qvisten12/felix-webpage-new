@@ -1,9 +1,10 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Card from '../components/Card'
-import Header from '../components/Header'
 import { motion } from 'framer-motion'
-import Drift from 'react-driftjs'
+import dynamic from 'next/dynamic'
+
+const Header = dynamic(() => import('../components/Header'))
+const Card = dynamic(() => import('../components/Card'))
 
 const Home: NextPage = () => {
   return (
@@ -12,14 +13,6 @@ const Home: NextPage = () => {
         <title>Felix Ljungqvist - Work</title>
       </Head>
       <Header />
-
-      {/* https://app.drift.com/settings2/widget */}
-      <Drift
-        appId="3x2mum5y49zy"
-        style={{
-          bottom: '100px',
-        }}
-      />
 
       <motion.section
         initial="hidden"
@@ -39,17 +32,24 @@ const Home: NextPage = () => {
         }}
         className="flex flex-col gap-14 lg:gap-32"
       >
-        <Card useAsRef={true} primaryText="Bilia" secondaryText="Branches" description="A complete revamp of Bilia's branch search layout." imageUrl="/images/anlaggningar.png" />
+        <Card
+          useAsRef={true}
+          primaryText="Bilia"
+          secondaryText="Branches"
+          description="A complete revamp of Bilia's branch search layout."
+          imageUrl="/images/anlaggningar.webp"
+          backgroundColor="rgb(205,225,179)"
+        />
 
         <Card
           primaryText="Personal Project"
           secondaryText="HackerScroller Clone"
           description="A redesign of hackerscroller, with a new slimer and more modern look."
-          imageUrl="/images/hackerscroller-preview.png"
+          imageUrl="/images/hackerscroller.webp"
           backgroundColor="#B4E7FC"
         />
 
-        <Card primaryText="Personal Project" secondaryText="Yutu Weather" description="A weather app, designed to be easy and fast." backgroundColor="#ece3d3" imageUrl="/images/yutu-preview.png" />
+        <Card primaryText="Personal Project" secondaryText="Yutu Weather" description="A weather app, designed to be easy and fast." backgroundColor="#ece3d3" imageUrl="/images/yutu.webp" />
       </motion.section>
     </div>
   )

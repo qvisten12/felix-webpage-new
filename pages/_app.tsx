@@ -1,8 +1,10 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import Layout from '../components/Layout'
 import Head from 'next/head'
 import { motion } from 'framer-motion'
+import dynamic from 'next/dynamic'
+
+const Layout = dynamic(() => import('../components/Layout'))
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (

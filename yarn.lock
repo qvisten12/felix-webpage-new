@@ -1781,11 +1781,6 @@ react-dom@^18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
-react-driftjs@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/react-driftjs/-/react-driftjs-1.2.2.tgz#56353857a8b70d5bb271ab39f9deb9f06e45e8c5"
-  integrity sha512-rQKRVJ5JaI4bTSHoDpvDORyUnWpLr/EZoeZLbdm2J5oqcdCbnOT+iKZJkzYskQXU4sg4X9XppdDfQ7Z/o0pErw==
-
 react-icons@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.6.0.tgz#f83eda179af5d02c047449a20b702c858653d397"

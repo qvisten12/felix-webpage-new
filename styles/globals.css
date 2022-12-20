@@ -10,19 +10,27 @@ html {
 @font-face {
   font-family: 'sf-regular';
   src: url('../public/fonts/SF_REGULAR.OTF');
+  fallback: sans-serif;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'sf-bold';
   src: url('../public/fonts/SF_BOLD.OTF');
+  fallback: sans-serif;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'akurat-light';
   src: url('../public/fonts/Akkurat_Light.otf');
+  fallback: sans-serif;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'akurat-normal';
   src: url('../public/fonts/Akkurat_Normal.otf');
+  fallback: sans-serif;
+  font-display: swap;
 }

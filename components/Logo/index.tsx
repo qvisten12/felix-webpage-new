@@ -9,7 +9,7 @@ interface Props {
 
 const Logo: FC<Props> = ({ Text = '' }) => {
   return (
-    <Link className={`font-sfRegular text-lg text-black relative h-8 w-8 `} href="/">
+    <Link aria-label="Return to home" className={`font-sfRegular text-lg text-black relative h-8 w-8 `} href="/">
       <div className={`${styles.logoImg}`}>
         <Image src="/images/letter-f.png" fill={true} alt="" />
       </div>
