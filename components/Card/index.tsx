@@ -62,7 +62,7 @@ const Card: FC<Props> = ({ primaryText = '', secondaryText = '', description = '
         <div className="absolute w-full h-full ">
           {!isAbout ? (
             <Link aria-label="Read more about this project" href={href}>
-              <Image src={imageUrl} quality={80} fill={true} loading="lazy" alt={secondaryText} />
+              <Image src={imageUrl} quality={80} fill={true} priority alt={secondaryText} />
             </Link>
           ) : (
             <Image priority src={imageUrl} quality={80} fill={true} alt={secondaryText} />
