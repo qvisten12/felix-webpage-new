@@ -18,8 +18,8 @@ const Card: FC<Props> = ({ primaryText = '', secondaryText = '', description = '
   return (
     <div tabIndex={0} id={useAsRef ? 'work' : ''} className="flex justify-between flex-col lg:flex-row gap-5">
       <div className="order-2 lg:order-1 flex flex-col justify-center items-start gap-2 tracking-wider w-full xl:w-1/2">
-        <h4 className="opacity-50 text-xl font-sfBold ">{primaryText}</h4>
-        <h3 className="text-4xl font-sfBold">{secondaryText}</h3>
+        <h3 className="opacity-50 text-xl font-sfBold ">{primaryText}</h3>
+        <h4 className="text-4xl font-sfBold">{secondaryText}</h4>
         <p className="font-akuratLight text-xl">{description}</p>
 
         {!isAbout ? (
