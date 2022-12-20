@@ -11,7 +11,7 @@ const Logo: FC<Props> = ({ Text = '' }) => {
   return (
     <Link aria-label="Return to home" className={`font-sfRegular text-lg text-black relative h-8 w-8 `} href="/">
       <div className={`${styles.logoImg}`}>
-        <Image src="/images/letter-f.png" fill={true} alt="" />
+        <Image priority src="/images/letter-f.png" fill={true} alt="" />
       </div>
     </Link>
   )

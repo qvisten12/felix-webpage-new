@@ -1,6 +1,5 @@
 import { ReactNode } from 'react'
 import Footer from '../Footer'
-import Head from 'next/head'
 
 import Navbar from '../Navbar'
 
@@ -16,9 +15,6 @@ const Layout = ({ children }: Props) => {
 
   return (
     <div className={` flex flex-col justify-between h-full bg-white`}>
-      <Head>
-        <html lang="en" />
-      </Head>
       <Navbar />
       <div className="mt-32 md:mt-64 mb-10 md:mb-20 px-5 sm:px-10 md:px-16 lg:px-24 xl:px-32">
         {children}

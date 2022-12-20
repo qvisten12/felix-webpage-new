@@ -11,6 +11,7 @@ const Home: NextPage = () => {
     <div>
       <Head>
         <title>Felix Ljungqvist - Work</title>
+        <html lang="en" />
       </Head>
       <Header />
 
