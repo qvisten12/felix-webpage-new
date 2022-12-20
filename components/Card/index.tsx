@@ -58,11 +58,15 @@ const Card: FC<Props> = ({ primaryText = '', secondaryText = '', description = '
           </div>
         )}
       </div>
-      <div className={`${styles.cardImage} order-1 lg:order-2 relative hover:scale-105 hover:transition-transform`} style={{ backgroundColor: `${backgroundColor}` }}>
+      <div className={`${styles.cardImage} order-1 lg:order-2 relative ${!isAbout ? 'hover:scale-105 hover:transition-transform' : ''}  `} style={{ backgroundColor: `${backgroundColor}` }}>
         <div className="absolute w-full h-full ">
-          <Link aria-label="Read more about this project" href={href}>
-            <Image src={imageUrl} quality={80} fill={true} loading="lazy" alt={secondaryText} />
-          </Link>
+          {!isAbout ? (
+            <Link aria-label="Read more about this project" href={href}>
+              <Image src={imageUrl} quality={80} fill={true} loading="lazy" alt={secondaryText} />
+            </Link>
+          ) : (
+            <Image priority src={imageUrl} quality={80} fill={true} loading="lazy" alt={secondaryText} />
+          )}
         </div>
       </div>
     </div>
