@@ -65,7 +65,7 @@ const Card: FC<Props> = ({ primaryText = '', secondaryText = '', description = '
               <Image src={imageUrl} quality={80} fill={true} loading="lazy" alt={secondaryText} />
             </Link>
           ) : (
-            <Image priority src={imageUrl} quality={80} fill={true} loading="lazy" alt={secondaryText} />
+            <Image priority src={imageUrl} quality={80} fill={true} alt={secondaryText} />
           )}
         </div>
       </div>
