@@ -9,7 +9,6 @@ const About = () => {
     <div>
       <Head>
         <title>Felix Ljungqvist - About Me</title>
-        <html lang="en" />
       </Head>
 
       <motion.section

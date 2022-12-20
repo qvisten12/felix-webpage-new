@@ -6,7 +6,6 @@ const FourOhFour = () => {
     <div className="my-48 md:mt-32 flex flex-col justify-center items-center mx-2 md:mx-0  text-black">
       <Head>
         <title>404 - Page not found</title>
-        <html lang="en" />
       </Head>
       <h1 className="font-bold text-7xl   tracking-wide">404</h1>
       <div
