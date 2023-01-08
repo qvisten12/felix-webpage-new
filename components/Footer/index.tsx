@@ -7,8 +7,17 @@ const Footer = () => {
 
       <div className="flex flex-col lg:flex-row justify-between font-akuratNormal mt-5">
         <div className="flex gap-3 w-full lg:w-fit justify-center items-center text-base">
-          <a href="mailto:felixljungqvist@icloud.com">Email</a>|<a href="https://twitter.com/LjungqvistFelix">Twitter</a> |
-          <a href="https://www.linkedin.com/in/felix-ljungqvist-422119181/">LinkedIn </a>
+          <a className="hover:opacity-60" href="mailto:felixljungqvist@icloud.com">
+            Email
+          </a>
+          |
+          <a className="hover:opacity-60" href="https://twitter.com/LjungqvistFelix">
+            Twitter
+          </a>{' '}
+          |
+          <a className="hover:opacity-60" href="https://www.linkedin.com/in/felix-ljungqvist-422119181/">
+            LinkedIn{' '}
+          </a>
         </div>
         <p className="mt-5 lg:mt-0 font-akuratLight text-lg w-full lg:w-fit flex justify-center">© 2022</p>
       </div>

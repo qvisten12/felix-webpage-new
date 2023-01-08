@@ -19,9 +19,9 @@ const FourOhFour = () => {
       <p className="text-black font-semibold text-xl md:text-4xl tracking-wide">Seems like you&apos;re lost</p>
       <p className=" text-black font-normal text-sm md:text-base  tracking-wide mt-2">the page you&apos;re looking for doesn&apos;t exist!</p>
       <Link
-        className="border-blue-500 border-2 p-2 mt-5
-                    rounded-md text-blue-500 text-2xl font-semibold
-                    hover:bg-blue-500 hover:text-white"
+        className=" py-3 px-10 mt-5
+                    rounded-md bg-black text-white text-2xl font-semibold
+                    hover:opacity-75"
         href="/"
       >
         Take me home

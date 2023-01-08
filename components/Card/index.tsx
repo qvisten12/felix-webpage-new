@@ -23,7 +23,12 @@ const Card: FC<Props> = ({ primaryText = '', secondaryText = '', description = '
         <p className="font-akuratLight text-xl">{description}</p>
 
         {!isAbout ? (
-          <Link aria-label="Read more about this project" href={href} className="py-3 px-10 w-full sm:w-fit text-center mt-2 text-lg bg-black text-white font-sfBold rounded-md hover:opacity-75">
+          <Link
+            href="/project/[pid]"
+            as={`/project/${href}`}
+            aria-label="Read more about this project"
+            className="py-3 px-10 w-full sm:w-fit text-center mt-2 text-lg bg-black text-white font-sfBold rounded-md hover:opacity-75"
+          >
             Read More
           </Link>
         ) : (
@@ -61,7 +66,7 @@ const Card: FC<Props> = ({ primaryText = '', secondaryText = '', description = '
       <div className={`${styles.cardImage} order-1 lg:order-2 relative ${!isAbout ? 'hover:scale-105 hover:transition-transform' : ''}  `} style={{ backgroundColor: `${backgroundColor}` }}>
         <div className="absolute w-full h-full ">
           {!isAbout ? (
-            <Link aria-label="Read more about this project" href={href}>
+            <Link href="/project/[pid]" as={`/project/${href}`} aria-label="Read more about this project">
               <Image src={imageUrl} quality={80} fill={true} priority alt={secondaryText} />
             </Link>
           ) : (
