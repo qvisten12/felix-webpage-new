@@ -3,7 +3,7 @@ import Spotify from '../Spotify/Spotify'
 
 const Footer = () => {
   return (
-    <div className="flex justify-between flex-col mt-5 my-20 px-6 lg:px-32 2xl:px-64">
+    <div className="flex justify-between flex-col mt-5 my-10 md:my-20 px-6 lg:px-32 2xl:px-64">
       <hr className="block sm:hidden" />
 
       <div className="flex flex-col lg:flex-row justify-between font-akuratNormal mt-5">
