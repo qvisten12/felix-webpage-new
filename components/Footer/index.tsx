@@ -1,4 +1,5 @@
 import React from 'react'
+import Spotify from '../Spotify/Spotify'
 
 const Footer = () => {
   return (
@@ -19,7 +20,12 @@ const Footer = () => {
             LinkedIn{' '}
           </a>
         </div>
-        <p className="mt-5 lg:mt-0 font-akuratLight text-lg w-full lg:w-fit flex justify-center">© 2022</p>
+
+        <div className="flex justify-center mt-5 lg:mt-0">
+          <Spotify />
+        </div>
+
+        <p className="mt-5 lg:mt-0 font-akuratLight text-lg w-full lg:w-fit flex justify-center items-center">© 2022</p>
       </div>
     </div>
   )
