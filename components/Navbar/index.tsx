@@ -1,16 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Router from 'next/router'
 import Logo from '../Logo'
-import Link from 'next/link'
-import styles from './Navbar.module.css'
-import { motion } from 'framer-motion'
 
 import { useRouter } from 'next/router'
 import ActiveLink from '../ActiveLink'
 
 const Navbar = () => {
-  const [navbarOpen, setNavbarOpen] = useState(false)
-
   const router = useRouter()
 
   const navRef = useRef<HTMLElement>(null)
@@ -33,9 +28,7 @@ const Navbar = () => {
   })
 
   useEffect(() => {
-    router.events.on('routeChangeComplete', () => {
-      setNavbarOpen(false)
-    })
+    router.events.on('routeChangeComplete', () => {})
     return () => {
       router.events.off('routeChangeComplete', () => {})
     }
@@ -50,27 +43,9 @@ const Navbar = () => {
       if (currentScrollPos < 1) {
         return
       }
-      setNavbarOpen(false)
       navRef.current!.style.top = '-180px'
     }
     prevScrollPos = currentScrollPos
-  }
-
-  const gotoElement = (id: any) => {
-    router.push('/')
-
-    setTimeout(() => {
-      const element = document.getElementById(id)
-      window.scrollTo({
-        top: element!.offsetTop - 50,
-        behavior: 'smooth',
-      })
-    }, 500)
-  }
-
-  const variants = {
-    open: { opacity: 1, y: 0 },
-    closed: { opacity: 0, y: '-100%' },
   }
 
   return (
@@ -91,43 +66,7 @@ const Navbar = () => {
             <ActiveLink href="/"> Work </ActiveLink>
             <ActiveLink href="/about"> About </ActiveLink>
           </div>
-
-          {/* <button
-            aria-expanded={navbarOpen}
-            aria-haspopup="true"
-            aria-label="Menu"
-            className={` ${navbarOpen ? `${styles.active}` : ''} ${styles.burger}`}
-            onClick={() => {
-              setNavbarOpen(!navbarOpen)
-            }}
-          >
-            <span className="bg-black" aria-hidden="true"></span>
-            <span className="bg-black" aria-hidden="true"></span>
-          </button> */}
         </div>
-
-        {/* <motion.div
-          animate={navbarOpen ? 'open' : 'closed'}
-          variants={variants}
-          transition={{ duration: 0.2 }}
-          className={`gap-7 mt-2  flex-col text-5xl  p-2 items-start w-full 
-          font-sfRegular
-        ${navbarOpen ? 'flex h-screen items-center bg-white bg-opacity-90' : 'hidden '}`}
-        >
-          <button onClick={() => gotoElement('work')}>
-            <a className={`text-black`}>Work</a>
-          </button>
-          <Link className={`text-black`} href="/about">
-            About
-          </Link>
-          <Link className={`text-black`} href="/contact">
-            Contact
-          </Link>
-
-          <a href="https://github.com/qvisten12/felix-webpage" rel="noreferrer nofollow" target="_blank" className={` text-black `}>
-            Source
-          </a>
-        </motion.div> */}
       </nav>
     </>
   )
