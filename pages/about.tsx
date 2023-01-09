@@ -30,8 +30,7 @@ const About = () => {
         className="flex flex-col gap-32"
       >
         <Card
-          primaryText="Felix Ljungqvist"
-          secondaryText="Thinker, Maker, Storyteller."
+          secondaryText="Felix Ljungqvist"
           isAbout={true}
           description="Hi! I’m Felix- a front-end developer based out of Gothenburg, Sweden. I'm currently a Junior front-end developer at Motorit, where I'm inventing new ways to make work meaningful.
           ‍
